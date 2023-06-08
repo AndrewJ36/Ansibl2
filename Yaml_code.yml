@@ -1,5 +1,5 @@
 - name: install updates
-  hosts: Veeam_Linux_Repository
+  hosts: all
   become: yes
   yum: name=* state=latest
   when: ansible_os_family == "RedHat
