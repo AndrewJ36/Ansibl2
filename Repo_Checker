@@ -6,25 +6,20 @@
   tasks:
     - name: ensure iscsiadm tools are installed
       dnf:
-        name: httpd,php,php-mysqli
-        state: latest
-        
-    - name: ensure iscsiadm tools are installed
-      dnf:
-        name: httpd,php,php-mysqli
+        name: iscsiadmd
         state: latest
 
-    - name: ensure httpd is started
+    - name: ensure iscsiadmd is started
       systemd:
-        name: httpd
+        name: iscsiadmd
         state: started
 
-    - name: ensure mariadb is at the latest version
+    - name: ensure multipathd is at the latest version
       dnf:
-        name: mariadb-server
+        name: multipathd-server
         state: latest
 
-    - name: ensure mariadb is started
+    - name: ensure multipathd is started
       systemd:
-        name: mariadb
+        name: multipathd
         state: started
