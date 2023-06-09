@@ -1,7 +1,10 @@
-- name: install updates
+- name: Install updates
   hosts: Veeam_Linux_Repository
   become: yes
-  yum: name=* state=latest
+  tasks: 
+   name: Install latest packages
+     yum:
+       name: '* state=latest'
   when: ansible_os_family == "RedHat
   
   #-name: Call Roles
