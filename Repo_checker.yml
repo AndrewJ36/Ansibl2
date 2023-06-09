@@ -1,5 +1,5 @@
 ---
-- hosts: Veeam_Linux_Repository
+- hosts: p10pdveeam02
   become: true
   become_user: root
 
