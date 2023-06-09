@@ -1,0 +1,25 @@
+---
+- hosts: Veeam_Linux_Repository
+  become: true
+  become_user: root
+
+  tasks:
+    - name: ensure iscsiadm tools are installed
+      dnf:
+        name: iscsiadmd
+        state: latest
+
+    - name: ensure iscsiadmd is started
+      systemd:
+        name: iscsiadmd
+        state: started
+
+    - name: ensure multipathd is at the latest version
+      dnf:
+        name: multipathd-server
+        state: latest
+
+    - name: ensure multipathd is started
+      systemd:
+        name: multipathd
+        state: started
