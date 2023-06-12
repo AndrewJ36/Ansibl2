@@ -1,6 +1,6 @@
 ---
 - name: Repo_checker
-  hosts: p10pdveeam02
+  hosts: Veeam_Linux_Repository
   become: true
   become_user: root
 
