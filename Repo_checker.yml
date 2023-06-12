@@ -1,5 +1,6 @@
 ---
-- hosts: p10pdveeam02
+- name: Repo_checker
+  hosts: p10pdveeam02
   become: true
   become_user: root
 
