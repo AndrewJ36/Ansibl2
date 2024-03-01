@@ -1,6 +1,6 @@
 ---
 - name: Repo_checker
-  hosts: Veeam_linux_repository
+  hosts: Veeam_Linux_Repository
   become: true
   become_user: veeam_repo
 
