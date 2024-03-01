@@ -1,8 +1,8 @@
 ---
 - name: Repo_checker
-  hosts: Veeam_Linux_Repository
+  hosts: all
   become: true
-  become_user: root
+  become_user: veeam_repo
 
   tasks:
     - name: ensure iscsiadm tools are installed
