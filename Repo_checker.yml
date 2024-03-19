@@ -1,7 +1,7 @@
 ---
 - name: Repo_checker
   hosts:  Veeam_Linux_Repository
-  become: true
+  become: yes
   become_user: veeam_repo
 
   tasks:
