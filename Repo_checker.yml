@@ -1,6 +1,6 @@
 ---
 - name: Repo_checker
-  hosts: Veeam_Linux_Repository
+  hosts:  p10pdveeambs01.systest.stratusvideo.com
   become: true
   become_user: veeam_repo
 
