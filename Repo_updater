@@ -1,14 +1,15 @@
-- name: Install updates
-  hosts: Veeam_Linux_Repository
-  become: yes
+---
+  - name: Install updates
+    hosts: Veeam_Linux_Repository
+    become: yes
 
-tasks: 
- - name: update the system
-    dnf:
-      update_cache: yes
+      tasks: 
+        - name: update the system
+        dnf:
+        update_cache: yes
     
-tasks: 
- - name: Upgrade all packages
-    dnf:
-      name: '*'
-      state: latest
+      tasks: 
+        - name: Upgrade all packages
+        dnf:
+        name: '*'
+        state: latest
