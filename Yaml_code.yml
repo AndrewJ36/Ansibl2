@@ -1,10 +1,16 @@
 - name: Install updates
   hosts: Veeam_Linux_Repository
   become: yes
-  tasks: 
+
+tasks: 
  - name: update the system
-    yum:
-      name: "*"
+    dnf:
+      update_cache: yes
+    
+tasks: 
+ - name: Upgrade all packages
+    dnf:
+      name: '*'
       state: latest
   #when: ansible_os_family == "RedHat
   
